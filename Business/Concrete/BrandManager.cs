@@ -13,6 +13,7 @@ namespace Business.Concrete
         public BrandManager(BrandManager brandManager)
         {
             _brandManager = brandManager;
+
         }
 
         public void Add(Brand brand)
