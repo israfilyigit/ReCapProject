@@ -12,8 +12,8 @@ namespace UIConsole
             // CarAdd();
             // CarDelete();
             // CarUpdate();
-            CarGetAll();
-
+            // CarGetAll();
+            GetCarDetail();
         }
 
         private static void CarAdd()
@@ -44,5 +44,16 @@ namespace UIConsole
             }
         }
 
+        private static void GetCarDetail()
+        {
+            CarManager carManager = new CarManager(new EfCarDal());
+            
+
+            foreach (var car in carManager.GetCarDetails())
+            {
+                Console.WriteLine(car.CarName  +"-"+ car.BrandName +"-" + car.ColorName+"-"+ car.CarDailyInPrice);
+            }
+           
+        }
     }
 }
