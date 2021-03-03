@@ -10,11 +10,7 @@ using System.Linq;
 namespace DataAccsess.Concrete.EntityFramework
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, CarRentalContext>, ICarDal
-    {
-
-
-
-
+    {     
         public List<CarDetailDto> GetCarDetails()
         {
             using (CarRentalContext context = new CarRentalContext())
